@@ -14,8 +14,27 @@ public class ControlFlowExercises {
 
 
         int y = 100;
-        do{y=y-5;
-            System.out.println(y);}
-        while(y>0);
+        do {
+            y = y - 5;
+            System.out.println(y);
+        }
+        while (y > 0);
+
+        int fizz;
+        int buzz;
+        int count;
+
+        for (count = 1; count < 100; count++) {
+            if (count % 3 == 0) {
+                System.out.println("fizz");
+
+            } if( count == 5){
+                System.out.println("buzz");
+            } if((count%3==0)&&(count%5==0)){
+                System.out.println("FizzBuzz");}
+            else{
+                System.out.println(count);
+            }
+        }
     }
 }
