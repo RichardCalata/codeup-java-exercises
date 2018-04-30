@@ -25,13 +25,16 @@ public class ControlFlowExercises {
         int count;
 
         for (count = 1; count < 100; count++) {
-            if (count % 3 == 0) {
-                System.out.println("fizz");
+            if((count%3==0)&(count%5==0)){
+                System.out.println("FizzBuzz");
+                continue;
 
             } if( count == 5){
                 System.out.println("buzz");
-            } if((count%3==0)&&(count%5==0)){
-                System.out.println("FizzBuzz");}
+                continue;
+            } if (count % 3 == 0) {
+                System.out.println("fizz");
+            continue;}
             else{
                 System.out.println(count);
             }
