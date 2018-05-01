@@ -73,8 +73,6 @@ public class ControlFlowExercises {
 
         }else{
             System.out.println("F");
-
-
-
+        }
     }
-}}
+}
