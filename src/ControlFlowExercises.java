@@ -21,7 +21,7 @@ public class ControlFlowExercises {
 //        }
 //        while (y > 0);
 
-//        int count;
+        int count;
 
 //        String output = "";
 //        if(count%3==0){output + "Fizz"}
@@ -29,24 +29,23 @@ public class ControlFlowExercises {
 //        if(output==""){
 //            System.out.println(count);
 
-//        for (count = 1; count < 100; count++) {
-//            if((count%3==0)&(count%5==0)){
-//                System.out.println("FizzBuzz");
-//                continue;
-//
-//            } if( count == 5){
-//                System.out.println("buzz");
-//                continue;
-//            } if (count % 3 == 0) {
-//                System.out.println("fizz");
-//            }
-//            else{
-//                System.out.println(count);
-//            }
-//        }
+        for (count = 1; count < 100; count++) {
+            if((count % 3 == 0) && (count % 5 == 0)){
+                System.out.println("FizzBuzz");
+                continue;
+            } if( count == 5){
+                System.out.println("buzz");
+                continue;
+            } if (count % 3 == 0) {
+                System.out.println("fizz");
+            }
+            else{
+                System.out.println(count);
+            }
+        }
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a Number: ");
+        System.out.print("Enter a Number: ");
         int userInt = sc.nextInt();
 
         System.out.println("Number  |  Square  |  Cube  ");
@@ -56,7 +55,7 @@ public class ControlFlowExercises {
             System.out.println("  " + q + "          " + square + "       " + cube);
         }
 
-        System.out.println("Enter a numerical grade from 0 to 100: ");
+        System.out.print("Enter a numerical grade from 0 to 100: ");
         int grade =sc.nextInt();
 
 
