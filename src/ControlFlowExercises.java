@@ -29,11 +29,11 @@ public class ControlFlowExercises {
 //        if(output==""){
 //            System.out.println(count);
 
-        for (count = 1; count < 100; count++) {
+        for (count = 1; count <=100; count++) {
             if((count % 3 == 0) && (count % 5 == 0)){
                 System.out.println("FizzBuzz");
                 continue;
-            } if( count == 5){
+            } if( count % 5 == 0){
                 System.out.println("buzz");
                 continue;
             } if (count % 3 == 0) {
@@ -52,7 +52,8 @@ public class ControlFlowExercises {
         for(int q=1;q<=userInt;q++) {
         int square = q*q;
         int cube = q*q*q;
-            System.out.println("  " + q + "          " + square + "       " + cube);
+//            System.out.println("  " + q + "          " + square + "       " + cube);
+            System.out.printf("%d       |%d       |%d     |%n",q,square,cube);
         }
 
         System.out.print("Enter a numerical grade from 0 to 100: ");
