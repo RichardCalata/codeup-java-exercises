@@ -71,7 +71,6 @@ public class ControlFlowExercises {
             System.out.println("C");
         }else if(grade<67&&grade>59){
             System.out.println("D");
-
         }else{
             System.out.println("F");
         }
