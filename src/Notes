@@ -1,0 +1,41 @@
+Recursion defintions
+
+base cases --  simplest thing that can happen -->Stop Condition
+
+recursive call must have different arguments. (else infinite loop !!)
+
+
+|==============================This is an infinite loop===========================|
+    public static void foo(){
+
+    foo();
+    }
+|==============================This is an infinite loop===========================|
+
+
+
+public class Recursion {
+
+public static void main(Sting[] args) {
+
+    }
+}
+
+public static in multiplyRcursive(int multiplicand, int multiplier){
+
+            if(multiplier == 0){
+            return 0;
+            }
+
+            if(multiplier ==1){
+            return multiplicand;
+            }
+
+            return multiplicand + multiplyRecursive(multiplicand,multiplier-1);
+        }
+
+
+        recursive call;
+        5*5
+        =5+5*4
+        =5=5*3
