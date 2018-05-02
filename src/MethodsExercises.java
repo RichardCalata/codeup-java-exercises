@@ -29,7 +29,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
         System.out.println(userInput + " IS a number between 1 and 10");
 
-        int nonNegative = nonNegInteger(0);
+        int nonNegative = nonNegInteger(1,170);
 
         double factorial = factorial(nonNegative);
         System.out.println(factorial);
@@ -73,27 +73,26 @@ public class MethodsExercises {
         }
     }
 
-    public static int nonNegInteger(int min) {
-        System.out.println("Please enter a non negative integer: ");
+    public static int nonNegInteger(int min, int max) {
+        System.out.println("Please enter a non negative integer no larger than 170: ");
         Scanner scan = new Scanner(System.in);
         int posNumber = scan.nextInt();
-        if (posNumber < min ) {
-            return nonNegInteger(min);
+        if (posNumber < min  || posNumber > 170) {
+            return nonNegInteger(min,max);
         } else {
             return posNumber;
         }
     }
 
-    public static long factorial(int n) {
-        long output;
+    public static double factorial(int n) {
+        double result;
 
-        output = n;
+        result = n;
 
-        // start w/ 1, then multiply by each number up to but not including the num.
         for (int i = 1; i < n; i++) {
-            output *= i;
+            result *= i;
         }
 
-        return output;
+        return result;
     }
 }
