@@ -34,6 +34,12 @@ public class MethodsExercises {
         double factorial = factorial(nonNegative);
         System.out.println(factorial);
 
+        double factorialV2 = factorialRecursion(1,nonNegative);
+        System.out.println(factorialV2);
+
+        int roll = dice(20);
+        System.out.println(roll);
+
 
     }
 
@@ -95,4 +101,27 @@ public class MethodsExercises {
 
         return result;
     }
+
+    public static double factorialRecursion(int start, int v) {
+        double resultV2;
+
+        resultV2 = v;
+        if (v > 0) {
+
+            return start * factorial(v);
+        } else
+            return resultV2;
+    }
+
+    public static int dice(int playerChoice){
+        Scanner d20 = new Scanner(System.in);
+        System.out.println("Roll a pair of dice. How many sides per die? ");
+        playerChoice = d20.nextInt();
+        int d1 = (int)Math.floor(Math.random()+playerChoice);
+        int d2 = (int)Math.floor(Math.random()+playerChoice);
+
+
+        return d1;
+    }
+
 }
