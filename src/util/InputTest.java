@@ -5,8 +5,7 @@ public class InputTest {
     public static void main(String[] args) {
         Input input = new Input(); //Instantiation
         System.out.println("enter some text");
-        String message = input.getString();
-        System.out.println(message);
+        System.out.println("hello " + input.getString());
         System.out.println("Do you want to continue?");
         boolean yesNo = input.yesNo();
         System.out.println(yesNo);
