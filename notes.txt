@@ -1,0 +1,81 @@
+********************************************* Object Oriented Programming *********************************************
+
+public class Person {
+
+
+    public String name;
+    public String lastName;
+
+
+//instance method//
+    public String fullName(){
+    return String.format("%s%s",name. lastName);
+    }
+}
+
+
+
+
+
+
+
+Person person = new Person() <--This is an example of a Constructor
+
+=======> Object bundles of functions and variables <=====
+
+**class** is to object as function definition is to function.
+
+give code a place to live and be organized
+
+field
+
+
+Example class
+
+public class UserApplication {
+        public static void main(String[] args){
+
+        User luis = new User();
+        luis.email ="Luis@Codeup.com";
+        luis.password = "password123";
+        luis.isAdmin = true;
+
+        User erik = new User();
+        erik.email = "erik@codeup.com";
+        erik.password = "supersecretpassword123"
+
+
+    }
+}
+
+
+
+
+public class User{
+    public String UserName
+    public String Email
+    public String Password
+    public boolean isAdmin
+    }
+
+
+
+(CONSTRUCTOR)
+    public User(String email, String userName, String password, boolean isAdmin){
+        this:email = email;
+        this:userName = userName;
+        this:password = password;
+        this:isAdmin = isAdmin;
+
+        numberOfUsers++;
+        }
+
+}
+
+
+
+
+
+
+
+

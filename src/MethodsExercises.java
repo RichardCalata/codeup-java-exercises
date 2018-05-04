@@ -38,7 +38,7 @@ public class MethodsExercises {
         System.out.println(factorialV2);
 
         int roll = dice(20);
-        System.out.println(roll);
+
 
 
     }
@@ -115,13 +115,22 @@ public class MethodsExercises {
 
     public static int dice(int playerChoice){
         Scanner d20 = new Scanner(System.in);
-        System.out.println("Roll a pair of dice. How many sides per die? ");
+        System.out.println("Roll a pair of dice. How many sides per die? (4-20)");
         playerChoice = d20.nextInt();
-        int d1 = (int)Math.floor(Math.random()+playerChoice);
-        int d2 = (int)Math.floor(Math.random()+playerChoice);
+        int d1 = roll(playerChoice);
+        System.out.println("First roll " + d1);
+        int d2 = roll(playerChoice);
+        System.out.println("Second roll " + d2);
+        System.out.println("Would you like to roll again? ");
+        String rollAgain = d20.next();
 
 
         return d1;
     }
+
+    public static int roll(int numberOfSides) {
+        return (int) Math.ceil(Math.random() * numberOfSides);
+    }
+
 
 }

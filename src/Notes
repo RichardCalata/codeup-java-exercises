@@ -39,3 +39,101 @@ public static in multiplyRcursive(int multiplicand, int multiplier){
         5*5
         =5+5*4
         =5=5*3
+
+ ================================================= May =====================================================
+
+ int sides = askForNumberOfSides();
+
+ //prompt user to roll dice (confirmation)
+
+ rollDiceMessage();
+
+ //roll two n-sided dice; display results of each, then ask user if she wants to play again.
+
+ int dice1 = roll();
+ int dice2 = roll();
+
+ sout "Dice 1 is %d Dice 2 is %d%n", dice1, dice 2
+
+
+ public static int askForNumberOfSides(){
+
+Scanner input = new Scanner(System.in);
+System.out.println("how many sides on a die?");
+return input.nextInt();
+        return 0; //////***********do while user wants to continue************
+ }
+
+ punlic static void rollDiceMessage(){
+
+ System.out.println("Hit enter to roll the Dice");
+ Scanner input = new Scanner(System.in);
+ input.nextLine();
+ }
+
+ public static in roll(int sides){
+
+ //use .random method
+
+ return (int) (Math.random()*sides)+1;  //implicit casting to integer from double
+ }
+
+public static boolean wantstocontinue(){
+
+System.out.print("DO you watn to play again?");
+Scanner input = new Scanner(System.in);
+
+String answer = input.nextLine().equals 'y';
+
+return "y".equalslsIgngoreCase(answer) || "yes".equalslsIgnoreCase(answer);
+
+
+********************************************* Guessing Game ************************************************************
+
+public class HighLow(){
+
+        Game picks a random number between 1 and 100.
+int randomNumber = gamePickNumber();
+        Prompts user to guess the number
+int guess = userPicksNumber(); All user inputs are validated
+
+        If user's guess is less than the number, it outputs "HIGHER"
+if(guess < randomNumber){
+System.out.println("HIGHER"}
+} else if { guess < randomNumber) {
+System.out.println("LOWER");
+} else {
+System.out.println("Good Guess");
+}
+        If user's guess is more than the number, it outputs "LOWER"
+        If a user guesses the number, the game should declare "GOOD GUESS!"
+        Hints
+
+        Use the random method of the java.lang.Math class to generate a random number.
+
+public static int gamePickNumber(){
+
+    return (int)(Math.random()*100)+1;
+}
+
+public static int userPickNumber(){
+   Scanner input = new Scanner(System.in);
+   System.out.println("Guess a Number");
+   return input.nextInt();
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
