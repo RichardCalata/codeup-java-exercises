@@ -11,16 +11,16 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-    String getString() {
+    public String getString() {
         return scanner.nextLine();
     }
 
-    boolean yesNo(){
+    public boolean yesNo(){
         String answer = scanner.nextLine();
         return "y".equalsIgnoreCase(answer)||"yes".equalsIgnoreCase(answer);
     }
 
-    int getInt(int min, int max){
+    public int getInt(int min, int max){
         int value = getInt();
         if(value < min || value > max) {
             return getInt(min, max);
@@ -29,11 +29,11 @@ public class Input {
     }
 
 
-    int getInt(){
+    public int getInt(){
         return scanner.nextInt();
     }
 
-    double getDouble(double min, double max){
+    public double getDouble(double min, double max){
             double value = getDouble();
             if(value < min || value > max) {
                 return getDouble( min, max);
@@ -41,7 +41,7 @@ public class Input {
             return value;
     }
 
-    double getDouble(){
+    public double getDouble(){
         return scanner.nextDouble();
     }
 
