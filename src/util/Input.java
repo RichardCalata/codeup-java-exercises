@@ -34,15 +34,15 @@ public class Input {
     }
 
     double getDouble(double min, double max){
-            double value = getInt();
+            double value = getDouble();
             if(value < min || value > max) {
-                return getInt( min, max);
+                return getDouble( min, max);
             }
             return value;
     }
 
     double getDouble(){
-        return 0;
+        return scanner.nextDouble();
     }
 
 
