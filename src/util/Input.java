@@ -11,15 +11,37 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-    public String getString() {
-        return null;
+    String getString() {
+        return scanner.nextLine();
     }
 
-    public boolean yesNo(){
-        return true;
+    boolean yesNo(){
+        String answer = scanner.nextLine();
+        return "y".equalsIgnoreCase(answer)||"yes".equalsIgnoreCase(answer);
     }
 
-    public int getInt(){
+    int getInt(int min, int max){
+        int value = getInt();
+        if(value < min || value > max) {
+            return getInt(min, max);
+        }
+        return value;
+    }
+
+
+    int getInt(){
+        return scanner.nextInt();
+    }
+
+    double getDouble(double min, double max){
+            double value = getInt();
+            if(value < min || value > max) {
+                return getInt( min, max);
+            }
+            return value;
+    }
+
+    double getDouble(){
         return 0;
     }
 
