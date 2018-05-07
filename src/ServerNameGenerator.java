@@ -4,13 +4,13 @@ import java.util.Random;
 public class ServerNameGenerator {
     public static Random rng = new Random();
     public static String[] adjectives = {"Paracosmic","Cyclic","Orthogonal","Fluid",
-            "Quantum","Harmonic","Concentric",
-            "Eccentric","Dynamic","Irregular",
-            "Misguided","Wayward"};
+            "Quantum","Harmonic","Concentric","Recombinant",
+            "Eccentric","Dynamic","Irregular","Flux",
+            "Misguided","Wayward","Cavitating","Interplanar"};
 
     public static String[] nouns = {"Orbit","Optimzer","Oscillator", "Valve",
                                     "Convergence", "Encabulator", "Waveguide","Matrix",
-                                    "Instance","Regulator","Plane","Multi-Plexor"};
+                                    "Instance","Regulator","Plane","Multi-Plexor","Core","Signal"};
 
     public static String getRandomString(String[] args){
         int randomIndex = rng.nextInt(args.length);
