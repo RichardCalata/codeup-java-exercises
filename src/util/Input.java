@@ -42,7 +42,9 @@ public class Input {
     }
 
     public double getDouble(){
-        return scanner.nextDouble();
+        double number = scanner.nextDouble();
+        scanner.nextLine();
+        return number;
     }
 
 

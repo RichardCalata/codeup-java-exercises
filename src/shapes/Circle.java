@@ -2,10 +2,13 @@ package shapes;
 
 public class Circle {
 
+    private static int circleCount = 0;
     private double radius;
+
 
     public Circle(double radius){
         this.radius = radius;
+        circleCount++;
     }
 
     public double getArea(){
@@ -13,6 +16,10 @@ public class Circle {
     }
     public double getCircumference(){
         return Math.PI * 2 * radius;
+    }
+
+    public static int getCircleCount(){
+        return circleCount;
     }
 
 }
