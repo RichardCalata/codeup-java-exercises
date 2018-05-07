@@ -8,7 +8,7 @@ public class ServerNameGenerator {
             "Eccentric","Dynamic","Irregular","Flux",
             "Misguided","Wayward","Cavitating","Interplanar"};
 
-    public static String[] nouns = {"Orbit","Optimzer","Oscillator", "Valve",
+    public static String[] nouns = {"Orbit","Optimizer","Oscillator", "Valve",
                                     "Convergence", "Encabulator", "Waveguide","Matrix",
                                     "Instance","Regulator","Plane","Multi-Plexor","Core","Signal"};
 

@@ -5,7 +5,7 @@ public class Person {
     // Private Name String property /field/variable/atrtribute/instance variable
     private String name;
 
-    public Person(String name){
+    public Person(String name){ //<--this is a constructor
 //        setName(name); //self encapsulation
         this.name = name;
     }
@@ -13,7 +13,7 @@ public class Person {
     // returns the person's name //**getter**//
     public String getName(){
         return name;
-    }
+    } //<--this is a method
     // changes the name property to the passed value
     public void setName(String name){
         this.name = name;

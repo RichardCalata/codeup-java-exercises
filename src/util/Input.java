@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-        //privat property names scanner
+        //private property names scanner
     private Scanner scanner;  //=null
 
     // 2 options: assign variable directly(inline) -- or constructor --
@@ -11,7 +11,7 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-    public String getString() {
+    public String getString() {  //this is a "getter"
         return scanner.nextLine();
     }
 
