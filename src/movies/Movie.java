@@ -15,6 +15,11 @@ public class Movie {
         this.category = category;
     }
 
+    public String name(){
+
+        return name;
+    }
+
 
 
 

@@ -7,7 +7,7 @@ import static movies.MoviesArray.findAll;
 public class MoviesApplication {
 
     public static void showMovies() {
-        System.out.println("this message");
+        System.out.println("\"showMovies\" method is called.");
         }
 
     public static void menu() {
@@ -44,12 +44,12 @@ public class MoviesApplication {
                     System.out.println("show scifi");
                     break;
                 default:
-                    System.out.println("A Message0");
+                    System.out.println("A default Message");
                     break;
             }
 
 
-        } while (true);
+        } while (false);
 
     }
 
