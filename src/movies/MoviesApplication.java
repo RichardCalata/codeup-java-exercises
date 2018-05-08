@@ -1,18 +1,32 @@
 package movies;
 
-import java.util.Scanner;
-
-import static movies.MoviesArray.findAll;
+import util.Input;
 
 public class MoviesApplication {
 
+    public static Movie[] movies = MoviesArray.findAll();
+    public static Input input = new Input();
+
+    public static void main(String[] args) {
+        menu();
+    }
+
     public static void showMovies() {
-        System.out.println("\"showMovies\" method is called.");
+        for(Movie movie : movies) {
+            System.out.println(movie);
         }
+    }
+
+        public static void showMovies(String category) {
+        for(Movie movie : movies) {
+            if(movie.isInCategory(category)) {
+                System.out.println(movie);
+            }
+
+        }
+    }
 
     public static void menu() {
-        Scanner input = new Scanner(System.in);
-        int userChoice;
 
         do {
             System.out.println("What would you like to do?");
@@ -25,36 +39,42 @@ public class MoviesApplication {
             System.out.println("5 - view movies in the scifi category");
 
             System.out.print("Enter your choice: ");
+           int  userChoice = getChoice();
 
-            userChoice = input.nextInt();
+            handleChoice(userChoice);
+        } while (true);
+    }
+
+    public static int getChoice() {
+        return input.getInt();
+    }
+
+    public static void handleChoice(int userChoice) {
 
             switch (userChoice) {
                 case 0:
+                    System.out.println("Thank you. Goodbye.");
                     System.exit(0);
                 case 1:
                     showMovies();
                     break;
                 case 2:
-                    System.out.println("show drama");
+                    showMovies("animated");
                     break;
                 case 3:
-                    System.out.println("show horror");
+                    showMovies("drama");
                     break;
                 case 4:
-                    System.out.println("show scifi");
+                    showMovies("horror");
                     break;
+                case 5:
+                    showMovies("scifi");
                 default:
                     System.out.println("A default Message");
                     break;
             }
-
-
-        } while (false);
-
+        }
     }
 
-    public static void main(String[] args) {
-menu();
 
-    }
-}
+

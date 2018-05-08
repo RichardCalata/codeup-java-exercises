@@ -12,9 +12,9 @@ public class ServerNameGenerator {
                                     "Convergence", "Encabulator", "Waveguide","Matrix",
                                     "Instance","Regulator","Plane","Multi-Plexor","Core","Signal"};
 
-    public static String getRandomString(String[] args){
-        int randomIndex = rng.nextInt(args.length);
-        return args[randomIndex];
+    public static String getRandomString(String[] anyword){
+        int randomIndex = rng.nextInt(anyword.length);
+        return anyword[randomIndex];
     }
 
     public static String getServerName() {

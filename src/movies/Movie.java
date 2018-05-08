@@ -15,12 +15,13 @@ public class Movie {
         this.category = category;
     }
 
-    public String name(){
+    public String toString(){
 
-        return name;
+        return name + ", Category: " + category;
     }
 
-
-
+    public boolean isInCategory(String category) {
+        return this.category.equals(category);
+    }
 
 }
