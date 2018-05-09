@@ -1,10 +1,10 @@
 package bookstore;
 
 public class Author extends Person {
-    int bookWritten;
+    int booksWritten;
 
-    public Author(String name, int bookWritten) {
+    public Author(String name, int booksWritten) {
         super(name);
-        this.bookWritten = bookWritten;
+        this.booksWritten = booksWritten;
     }
 }
