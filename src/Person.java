@@ -23,8 +23,17 @@ public void sayHello(){
 
     public static void main(String[] args) {
         Person someOne = new Person("Bob");
+        Person someOneNew = new Person("Frank");
         System.out.println(someOne.name);
+        System.out.println(someOneNew.name);
+        someOne.sayHelloTo(someOneNew);
 
+
+
+    }
+
+    private void sayHelloTo(Person person) {
+        System.out.println(getName() +" says Hello to "+ person.getName());
     }
 }
 
