@@ -5,7 +5,7 @@ public class Rectangle {
     public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
-    }
+    }//shadowing -- assigning a named property on the object with an argument  coming n from a method.
 
     protected double width;
     protected double length;
