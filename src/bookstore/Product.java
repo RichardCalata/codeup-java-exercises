@@ -1,8 +1,7 @@
 package bookstore;
 
 public class Product {
-    public Product() {
-    }
+
 
     String title;
     double price;
