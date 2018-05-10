@@ -2,8 +2,9 @@ package shapes;
 
 public class Square extends Quadrilateral implements Measurable{
     private double side;
-    public Square(double length, double width) {
-        super(length, length);
+
+    public Square(double side) {
+        super(side, side);
     }
 
     public void setSide(double side) {
