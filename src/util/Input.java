@@ -28,7 +28,7 @@ public class Input {
         return value;
     }
 
-
+//method overload of getInt above takes in two args as lower and upper limits below is any Int
     public int getInt(){
         return scanner.nextInt();
     }

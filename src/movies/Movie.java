@@ -10,6 +10,14 @@ public class Movie {
     private static String name;
     private static String category;
 
+    public static void setName(String name) {
+        Movie.name = name;
+    }
+
+    public static String getName() {
+        return name;
+    }
+
     public Movie(String name, String category) {
         this.name = name;
         this.category = category;
@@ -17,7 +25,7 @@ public class Movie {
 
     public String toString(){
 
-        return name + ", Category: " + category;
+        return this.name + ", Category: " + category;
     }
 
     public boolean isInCategory(String category) {

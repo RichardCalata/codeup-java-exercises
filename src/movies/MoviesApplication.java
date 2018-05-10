@@ -8,6 +8,7 @@ public class MoviesApplication {
     public static Input input = new Input();
 
     public static void main(String[] args) {
+
         menu();
     }
 
@@ -16,6 +17,12 @@ public class MoviesApplication {
             System.out.println(movie);
         }
     }
+
+//    public static void showMovies(){
+//        for(int i=0;i<movies.length;i++){
+//            System.out.println(movies);
+//        }
+//    }
 
         public static void showMovies(String category) {
         for(Movie movie : movies) {
