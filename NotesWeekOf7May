@@ -12,3 +12,28 @@ Liskov substitution
 Interface segregation
 Dependency Inversion principle
 
+============================================ Thursday ===========================================================
+
+Abstract Classes and Interfaces
+
+abstract class Employee {
+    public abstract String work();  ============method heading WITHOUT function body=============
+}
+
+class Accountant extends Employee {
+    public String work() {
+        return "crunching numbers";  <============== children must define method given in parent class
+    }
+}
+
+// ERROR!
+Employee tim = new Employee();
+// okay
+Employee bob = new Accountant();
+
+=====all child classes must implement
+
+
+======= abstract classes can have regular methods ======
+
+
