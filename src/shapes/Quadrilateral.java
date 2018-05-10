@@ -4,13 +4,13 @@ public class Quadrilateral extends Shape implements Measurable {
 
 
     protected double length;
+    protected double width;
 
     public Quadrilateral(double length, double width) {
         this.length = length;
         this.width = width;
     }
 
-    protected double width;
 
     @Override
     public double getPerimeter() {
@@ -21,6 +21,7 @@ public class Quadrilateral extends Shape implements Measurable {
     public double getArea() {
         return this.length*this.width;
     }
+
     public double getLength() {
         return length;
     }
