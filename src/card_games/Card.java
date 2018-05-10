@@ -1,10 +1,23 @@
+
+
 package card_games;
 
 public class Card {
+    public  int getStrength() {
+        return strength;
+    }
 
-    protected static int strength;
-    protected static String suit;
-    protected static String value;
+    public  String getSuit() {
+        return suit;
+    }
+
+    public  String getValue() {
+        return value;
+    }
+
+    protected  int strength;
+    protected  String suit;
+    protected  String value;
 
 
     public Card(int strength, String suit, String value) {
