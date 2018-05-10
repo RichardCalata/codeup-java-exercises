@@ -7,6 +7,7 @@ public class MoviesApplication {
     public static Movie[] movies = MoviesArray.findAll();
     public static Input input = new Input();
 
+
     public static void main(String[] args) {
 
         menu();
@@ -14,20 +15,20 @@ public class MoviesApplication {
 
     public static void showMovies() {
         for(Movie movie : movies) {
-            System.out.println(movie);
+            System.out.println(movie.getName() + " - " + movie.getCategory());
         }
     }
 
 //    public static void showMovies(){
 //        for(int i=0;i<movies.length;i++){
-//            System.out.println(movies);
+//            System.out.println(movies[i].getName());
 //        }
 //    }
 
         public static void showMovies(String category) {
         for(Movie movie : movies) {
             if(movie.isInCategory(category)) {
-                System.out.println(movie);
+                System.out.println(movie.getName() + " - " + movie.getCategory());
             }
 
         }
