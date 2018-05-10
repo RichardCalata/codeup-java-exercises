@@ -26,13 +26,13 @@ public class Rectangle extends Quadrilateral implements Measurable{
         super.setWidth(width);
     }
 
-    @Override
-    public double getPerimeter() {
-        return super.getPerimeter();
-    }
-
-    @Override
-    public double getArea() {
-        return super.getArea();
-    }
+//    @Override
+//    public double getPerimeter() {
+//        return super.getPerimeter();
+//    }
+//
+//    @Override
+//    public double getArea() {
+//        return super.getArea();
+//    }
 }

@@ -11,6 +11,10 @@ public class Square extends Quadrilateral implements Measurable{
         this.side = side;
     }
 
+    public void setLength(double length){
+        this.side =length;
+    }
+
     public double getSide() {
 
         return side;
