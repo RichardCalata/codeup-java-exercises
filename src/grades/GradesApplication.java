@@ -12,7 +12,7 @@ public class GradesApplication {
 
             Scanner input = new Scanner(System.in);
             String userInput;
-            String userResponse;
+
             Student Stephen = new Student("Stephen");
 
             Stephen.addGrade(100);
@@ -57,8 +57,8 @@ public class GradesApplication {
 
             Student Nestor = new Student("Nestor");
 
-            Nestor.addGrade(24);
-            Nestor.addGrade(37);
+            Nestor.addGrade(0);
+            Nestor.addGrade(0);
             Nestor.addGrade(41);
             Nestor.addGrade(90);
 
@@ -68,7 +68,7 @@ public class GradesApplication {
         students.put("Mr. Robot", Stephen);
         students.put("Toaster", John);
         students.put("Roach", Thomas);
-        students.put("N6N-HG", Dane);
+        students.put("Condor", Dane);
         students.put("Duchamp", Jennifer);
         students.put("Rocinante", Nestor);
         students.put("Pavlova", Monica);
@@ -77,21 +77,24 @@ public class GradesApplication {
         System.out.println("Welcome");
 
         System.out.println("Here are some of our student objects!");
-
+        do {
         for (Map.Entry<String, Student> entry : students.entrySet()) {
             System.out.print(
                   entry.getKey() +  "  " + entry.getValue().getName() + "  |  ");
         }
 
-        do {
+
             System.out.println("\n \n  Which student object would you like to inspect? (Enter a key.)");
             userInput = input.next();
             if(students.containsKey(userInput)) {
 
                 Student output = students.get(userInput);
-                System.out.println(output.getName() + "'s " + "grades are " + output.grades + " with an average of " + output.getGradeAverage());
-                System.out.println("Do you want to continue?");
+                System.out.println(output.getName() + "'s " + "grades are "
+                        + output.grades
+                        + " with an average of "
+                        + output.getGradeAverage());
             } else System.out.println("No such student object");
+                System.out.println("Do you want to continue?");
 
         } while("Y".equalsIgnoreCase(input.next().trim()));
         System.out.println("Thank you! Have a nice day.");
