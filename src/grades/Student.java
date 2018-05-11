@@ -21,8 +21,7 @@ public class Student {
             sum += grade;
         }
         return sum/grades.size();
-    };
-
-
-
+    }
 }
+
+
