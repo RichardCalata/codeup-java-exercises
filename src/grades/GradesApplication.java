@@ -84,7 +84,7 @@ public class GradesApplication {
         }
 
         do {
-            System.out.println("\n \n  Which student object would you like to inspect? (Enter a key or \"0\" to exit.)");
+            System.out.println("\n \n  Which student object would you like to inspect? (Enter a key.)");
             userInput = input.next();
             if(students.containsKey(userInput)) {
 
@@ -93,7 +93,7 @@ public class GradesApplication {
                 System.out.println("Do you want to continue?");
             } else System.out.println("No such student object");
 
-        } while("Y".equalsIgnoreCase(input.next().trim())||"Yes".equalsIgnoreCase(input.next().trim()));
+        } while("Y".equalsIgnoreCase(input.next().trim()));
         System.out.println("Thank you! Have a nice day.");
     }
 }
