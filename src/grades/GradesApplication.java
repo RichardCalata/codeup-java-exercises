@@ -78,11 +78,12 @@ public class GradesApplication {
         System.out.println("Here are some of our student objects!");
 
         for (Map.Entry<Integer, Student> entry : students.entrySet()) {
-            System.out.println();
+            System.out.print(
+                  entry.getKey() +  "  " + entry.getValue().getName() + "  |  ");
         }
 
         do {
-            System.out.println("Which student object would you like to inspect?");
+            System.out.println("\n \n  Which student object would you like to inspect? (Enter a number or \"0\" to exit.)");
             userInput = input.nextInt();
             if(userInput >7 || userInput < 1){
 
