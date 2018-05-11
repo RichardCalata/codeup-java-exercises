@@ -80,10 +80,17 @@ public class GradesApplication {
         do {
             System.out.println("Which student object would you like to inspect?");
             userInput = input.nextInt();
+            if(userInput >7 || userInput < 1){
+
+            System.out.println("Thank you! Have a nice day!");
+                System.exit(0);
+            }
 
             Student output = students.get(userInput);
             System.out.println(output.getName() + "'s " + "grades are " + output.grades + " with an average of " + output.getGradeAverage());
+
         } while (userInput <8 && userInput> 0);
+
 
     }
 }
