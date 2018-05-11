@@ -10,12 +10,13 @@ public class Student {
 
     }
 
-    private static String name;
+    private String name;
+
     ArrayList<Integer> grades = new ArrayList<>();
 
-    public static void setName(String name) {
-        Student.name = name;
-    }
+//    public static void setName(String name) {
+//        Student.name = name;
+//    }
 
     // returns the student's name
     public String getName(){

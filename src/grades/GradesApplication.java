@@ -3,80 +3,87 @@ package grades;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
 
     public static void main(String[] args) {
 
-            Student Billy = new Student("Billy");
+            Scanner input = new Scanner(System.in);
+            int userInput;
+            Student Stephen = new Student("Stephen");
 
-            Billy.addGrade(100);
-            Billy.addGrade(88);
-            Billy.addGrade(67);
-            Billy.addGrade(89);
+            Stephen.addGrade(100);
+            Stephen.addGrade(88);
+            Stephen.addGrade(97);
+            Stephen.addGrade(89);
 
-            Student Stephanie = new Student("Stephanie");
+            Student John = new Student("John");
 
-            Stephanie.addGrade(100);
-            Stephanie.addGrade(98);
-            Stephanie.addGrade(92);
-            Stephanie.addGrade(93);
+            John.addGrade(100);
+            John.addGrade(98);
+            John.addGrade(92);
+            John.addGrade(93);
 
-            Student Jack = new Student("Jack");
+            Student Thomas = new Student("Thomas");
 
-            Jack.addGrade(100);
-            Jack.addGrade(98);
-            Jack.addGrade(96);
-            Jack.addGrade(89);
+            Thomas.addGrade(100);
+            Thomas.addGrade(98);
+            Thomas.addGrade(96);
+            Thomas.addGrade(99);
 
-            Student Tim = new Student("Tim");
+            Student Jennifer = new Student("Jennifer");
 
-            Tim.addGrade(100);
-            Tim.addGrade(88);
-            Tim.addGrade(98);
-            Tim.addGrade(96);
+            Jennifer.addGrade(100);
+            Jennifer.addGrade(98);
+            Jennifer.addGrade(98);
+            Jennifer.addGrade(100);
 
-            Student Pat = new Student("Pat");
+            Student Dane = new Student("Dane");
 
-            Pat.addGrade(100);
-            Pat.addGrade(100);
-            Pat.addGrade(99);
-            Pat.addGrade(100);
+            Dane.addGrade(100);
+            Dane.addGrade(100);
+            Dane.addGrade(99);
+            Dane.addGrade(100);
 
-            Student Jane = new Student("Jane");
+            Student Monica = new Student("Monica");
 
-            Jane.addGrade(97);
-            Jane.addGrade(100);
-            Jane.addGrade(98);
-            Jane.addGrade(91);
+            Monica.addGrade(97);
+            Monica.addGrade(100);
+            Monica.addGrade(98);
+            Monica.addGrade(100);
 
             Student Nestor = new Student("Nestor");
 
-            Nestor.addGrade(54);
-            Nestor.addGrade(67);
-            Nestor.addGrade(71);
-            Nestor.addGrade(80);
+            Nestor.addGrade(24);
+            Nestor.addGrade(37);
+            Nestor.addGrade(41);
+            Nestor.addGrade(90);
 
         System.out.println(Nestor.grades);
         System.out.println(Nestor.getGradeAverage());
 
-        HashMap<String, Student> students = new HashMap<>();
+        HashMap<Integer, Student> students = new HashMap<>();
 
-        students.put("1", Stephanie);
-        students.put("2", Jack);
-        students.put("3", Tim);
-        students.put("4", Pat);
-        students.put("5", Jane);
-        students.put("6", Nestor);
-        students.put("7", Billy);
+        students.put(1, Stephen);
+        students.put(2, John);
+        students.put(3, Thomas);
+        students.put(4, Dane);
+        students.put(5, Jennifer);
+        students.put(6, Nestor);
+        students.put(7, Monica);
 
-        Student output = students.get("6");
 
-        System.out.println(output.getName());
-        System.out.println(output.getGradeAverage());
         System.out.println("Welcome");
         System.out.println("Here are some of our student objects!");
-        System.out.println("Which student object would you like to inspect?");
+
+        do {
+            System.out.println("Which student object would you like to inspect?");
+            userInput = input.nextInt();
+
+            Student output = students.get(userInput);
+            System.out.println(output.getName() + "'s " + "grades are " + output.grades + " with an average of " + output.getGradeAverage());
+        } while (userInput <8 && userInput> 0);
 
     }
 }
