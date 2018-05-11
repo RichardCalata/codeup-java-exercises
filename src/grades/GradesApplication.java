@@ -3,6 +3,7 @@ package grades;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class GradesApplication {
@@ -60,8 +61,6 @@ public class GradesApplication {
             Nestor.addGrade(41);
             Nestor.addGrade(90);
 
-        System.out.println(Nestor.grades);
-        System.out.println(Nestor.getGradeAverage());
 
         HashMap<Integer, Student> students = new HashMap<>();
 
@@ -75,7 +74,12 @@ public class GradesApplication {
 
 
         System.out.println("Welcome");
+
         System.out.println("Here are some of our student objects!");
+
+        for (Map.Entry<Integer, Student> entry : students.entrySet()) {
+            System.out.println();
+        }
 
         do {
             System.out.println("Which student object would you like to inspect?");
@@ -89,7 +93,7 @@ public class GradesApplication {
             Student output = students.get(userInput);
             System.out.println(output.getName() + "'s " + "grades are " + output.grades + " with an average of " + output.getGradeAverage());
 
-        } while (userInput <8 && userInput> 0);
+        } while (true);
 
 
     }
