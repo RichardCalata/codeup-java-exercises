@@ -10,7 +10,7 @@ public class GradesApplication {
 
     public static void main(String[] args) {
 
-            Scanner input = new Scanner(System.in);
+            Scanner input = new Scanner(System.in).useDelimiter("\n");
             String userInput;
 
             Student Stephen = new Student("Stephen");
@@ -57,10 +57,10 @@ public class GradesApplication {
 
             Student Nestor = new Student("Nestor");
 
-            Nestor.addGrade(0);
-            Nestor.addGrade(0);
-            Nestor.addGrade(41);
+            Nestor.addGrade(100);
             Nestor.addGrade(90);
+            Nestor.addGrade(0);
+            Nestor.addGrade(0);
 
 
         HashMap<String, Student> students = new HashMap<>();
@@ -76,15 +76,15 @@ public class GradesApplication {
 
         System.out.println("Welcome");
 
-        System.out.println("Here are some of our student objects!");
+        System.out.println("Here are some of our student objects!\n");
         do {
         for (Map.Entry<String, Student> entry : students.entrySet()) {
-            System.out.print(
-                  entry.getKey() +  "  " + entry.getValue().getName() + "  |  ");
-        }
+            System.out.print("username: " +
+                  entry.getKey() + " |  ");
+                }
 
 
-            System.out.println("\n \n  Which student object would you like to inspect? (Enter a key.)");
+            System.out.println("\n Which student object would you like to inspect? (Enter an id.)");
             userInput = input.next();
             if(students.containsKey(userInput)) {
 
@@ -93,10 +93,10 @@ public class GradesApplication {
                         + output.grades
                         + " with an average of "
                         + output.getGradeAverage());
-            } else System.out.println("No such student object");
+                        } else System.out.println("No such student object");
                 System.out.println("Do you want to continue?");
 
-        } while("Y".equalsIgnoreCase(input.next().trim()));
+        } while("Y".equalsIgnoreCase(input.next().trim())||"yes".equalsIgnoreCase(input.next().trim()));
         System.out.println("Thank you! Have a nice day.");
     }
 }
